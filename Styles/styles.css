@@ -10,6 +10,18 @@ body {
     background: linear-gradient(to bottom, #ffe8e8, #ffc9c9);
     color: #333;
     line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o corpo ocupe toda a altura da tela */
+}
+
+section {
+    flex: 1; /* O conteúdo principal ocupa o espaço restante */
+    padding: 20px;
+}
+
+main {
+    flex: 1; /* Faz com que o conteúdo principal "cresça" para preencher o espaço */
 }
 
 /* Cabeçalho */
@@ -84,13 +96,13 @@ header p {
 /* Rodapé */
 footer {
     text-align: center;
-    padding: 20px;
     background: #ff6b6b;
     color: white;
     font-size: 1rem;
-    margin-top: 40px;
+    padding: 10px 20px;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
+    margin-top: auto; /* Espaço acima do rodapé */ 
 }
 
 .slide img {
@@ -101,4 +113,117 @@ footer {
     border-radius: 15px; /* Bordas arredondadas */
     display: block; /* Centraliza corretamente no contêiner */
     margin: 0 auto;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.checklist-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.checklist ul {
+    list-style: none;
+    padding: 0;
+    flex: 2;
+}
+
+.checklist li {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.checklist-details {
+    background-color: #fff;
+    border: 2px solid #ff6b6b;
+    border-radius: 10px;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1;
+}
+
+.checklist-details h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2rem;
+    color: #ff6b6b;
+    margin-bottom: 15px;
+}
+
+.checklist-details p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.6;
+}
+
+.vales {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 20px; /* Garante espaço antes do rodapé */
+}
+
+.vale {
+    display: flex;
+    justify-content: center;   /* Alinha horizontalmente */
+    align-items: center;       /* Alinha verticalmente */
+    background-color: white;
+    border: 2px dashed #4a148c;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 1.2em;
+    color: #4a148c;
+    width: 200px;
+    height: 150px;             /* Define uma altura fixa para centralizar melhor */
+    text-align: center;        /* Garante que o texto fique centralizado */
+    margin: 10px;              /* Adiciona um pouco de espaço entre os vales */
+}
+
+.vale:hover {
+    transform: scale(1.05);
+}
+
+/* Para páginas com muito conteúdo */
+body.page-vales .vales {
+    flex-grow: 0; /* Não deixa os vales se expandirem */
+}
+
+body.page-vales section {
+    flex: unset; /* Remove o crescimento forçado do conteúdo */
+}
+
+/* Estilo do botão de download */
+.btn-download {
+    display: inline-block;
+    background-color: #4a148c;  /* Cor do botão */
+    color: white;
+    font-size: 1.2em;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-download:hover {
+    background-color: #6a1b9a; /* Cor ao passar o mouse */
+}
+
+.download {
+    text-align: center; /* Centraliza o botão */
+    margin-top: 30px;
 }
