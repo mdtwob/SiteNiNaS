@@ -1,0 +1,104 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(to bottom, #ffe8e8, #ffc9c9);
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(to bottom right, #ff6b6b, #ff9472);
+    color: white;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-family: 'Great Vibes', cursive;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Carousel */
+.carousel {
+    position: relative;
+    margin: 40px auto;
+    width: 80%;
+    max-width: 800px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+}
+
+.slide img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+/* Mensagem */
+.message {
+    text-align: center;
+    margin: 40px auto;
+    padding: 30px 20px;
+    max-width: 600px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.message h2 {
+    font-size: 2.5rem;
+    font-family: 'Great Vibes', cursive;
+    color: #ff6b6b;
+    margin-bottom: 20px;
+}
+
+.message p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #ff6b6b;
+    color: white;
+    font-size: 1rem;
+    margin-top: 40px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.slide img {
+    max-width: 100%; /* Define o limite máximo da largura */
+    max-height: 400px; /* Define o limite máximo da altura */
+    width: auto; /* Permite redimensionamento proporcional */
+    height: auto; /* Mantém a proporção */
+    border-radius: 15px; /* Bordas arredondadas */
+    display: block; /* Centraliza corretamente no contêiner */
+    margin: 0 auto;
+}
